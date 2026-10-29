@@ -54,7 +54,7 @@ Jumlah data: 205 baris menjadi 197 baris. Delapan baris yang hilang terdiri dari
 
 ## Transformasi
 
-**Min-Max scaling** diterapkan ke 14 kolom numerik: `price`, `normalized-losses`, `wheel-base`, `height`, `curb-weight`, `engine-size`, `bore`, `stroke`, `compression-ratio`, `horsepower`, `peak-rpm`, `city-mpg`, `highway-mpg`, `city-L/100km`. Semuanya dipetakan ke rentang 0 sampai 1 supaya kolom dengan angka besar seperti `price` tidak mendominasi kolom kecil seperti `bore`. Sedangkan kolom `length` dan `width` tidak di-scale karena sudah berada di 0 sampai 1. `symboling`, `diesel`, dan `gas` dibiarkan karena berupa kode atau kolom biner.
+**Min-Max scaling** diterapkan ke 14 kolom numerik: `price`, `normalized-losses`, `wheel-base`, `height`, `curb-weight`, `engine-size`, `bore`, `stroke`, `compression-ratio`, `horsepower`, `peak-rpm`, `city-mpg`, `highway-mpg`, `city-L/100km`. Semuanya dipetakan ke rentang 0 sampai 1 supaya kolom dengan angka besar seperti `price` tidak mendominasi kolom kecil seperti `bore`. Sedangkan kolom `length` dan `width` tidak di-scale karena sudah berada di 0 sampai 1. Lalu untuk kolom `symboling`, `diesel`, dan `gas` dibiarkan karena berupa kode atau kolom biner.
 
 **One-hot encoding** diterapkan ke 10 kolom kategorikal: `make`, `aspiration`, `num-of-doors`, `body-style`, `drive-wheels`, `engine-location`, `engine-type`, `num-of-cylinders`, `fuel-system`, `horsepower-binned`. Tidak ada urutan alami antar kategori ini, jadi one-hot lebih aman daripada label angka.
 
