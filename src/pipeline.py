@@ -1,5 +1,7 @@
 """
-Data Pipeline Automobile
+Data Pipeline Automobile (Versi PESERTA)
+
+Isi bagian TODO. Setelah lengkap, jalankan dengan:
 
 python src/pipeline.py
 
@@ -92,9 +94,13 @@ def transform_data(df: pd.DataFrame) -> pd.DataFrame:
     )
 
     # One-hot encoding
-    df = pd.get_dummies(df, columns=["make", "aspiration", "num-of-doors", "body-style",
-                                     "drive-wheels", "engine-location", "engine-type",
-                                     "num-of-cylinders", "fuel-system", "horsepower-binned"])
+    df = pd.get_dummies(
+        df,
+        columns=["make", "aspiration", "num-of-doors", "body-style", "drive-wheels",
+                 "engine-location", "engine-type", "num-of-cylinders", "fuel-system",
+                 "horsepower-binned"],
+        dtype=int,
+    )
 
     print(f"[transform] {df.shape[1]} kolom setelah transformasi")
     return df
